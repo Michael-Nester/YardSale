@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@layer base {
+  body {
+    background-color: white;
+    color: black;
+    font-family: monospace;
+    -webkit-font-smoothing: antialiased;
+    /* Force raw scrolling, disable smooth behavior */
+    scroll-behavior: auto; 
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Force all links to look raw unless specified */
+  a {
+    color: #1e40af; /* Tailwind blue-800 */
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #2563eb; /* Tailwind blue-600 */
+  }
+
+  /* Bring back the aggressive focus outlines from 1999 */
+  a:focus, button:focus, input:focus {
+    outline: 2px solid black;
+    outline-offset: 1px;
+  }
+}
