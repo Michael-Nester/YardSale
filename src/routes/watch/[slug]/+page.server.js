@@ -1,14 +1,16 @@
 import { error } from '@sveltejs/kit';
-import { videos } from '../data.js';
 
-export function load({ params }) {
-    const video = videos.find((video) => video.slug === params.slug);
+export async function load({ params, fetch }) {
 
-    if (!video) {
-        throw error(404, 'Video not found');
+    const response = await fetch(`http://localhost:8080/videos/${params.slug}`);
+
+    if (!response.ok) {
+        if (response.status === 404) {
+            error(404, 'FILE_NOT_FOUND');
+        }
+        error(500, "SYSTEM_OFFLINE");
     }
-
-    return {
-        video
-    };
+    
+    const video = await response.json();
+    return { video };
 }

@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    background-color: white;
+    background-color: #454B1B;
     color: black;
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
@@ -14,8 +14,8 @@
 
   /* Force all links to look raw unless specified */
   a {
-    color: #1e40af; /* Tailwind blue-800 */
-    text-decoration: underline;
+    color: #e5e5e5; /*  */
+    /*text-decoration: underline;*/
   }
 
   a:hover {
@@ -27,4 +27,16 @@
     outline: 2px solid black;
     outline-offset: 1px;
   }
+}
+
+.crt-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 50;
 }
