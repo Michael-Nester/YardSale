@@ -39,10 +39,31 @@
 
 	</aside>
 	
-	<div class="flex-1 h-full overflow-y-auto bg-[#8A9A5B] flex flex-col relative">
+	<div class="flex-1 h-full overflow-y-auto bg-[#0f0f0f] flex flex-col relative text-zinc-200">
 		<!--Middle column, main page-->
+
+
+		<div class="sticky top-0 z-20 bg-[#0f0f0f] border-b-4 border-zinc-800">
+
+			<div class="flex justify-between items-center p-3 text-xs md:text-sm font-bold text-zinc-500 border-b-2 border-zinc-800 bg-black">
+				<div class="flex-1 flex items-center justify-center pr-6">
+
+					<img
+						src="/baseball-bat-1.png"
+						alt="Yard Sale Bat Logo"
+						class="h-8 md:h-50 w-auto max-w-none object-contain object-center"
+					/>
+					<!--<span class="tracking-widest">SYS_ONLINE</span>-->
+				</div>
+				
+				<!--placeholder buttons for search bar and account-->
+				<div class="flex items-center space-x-6">
+					<button class="hover:text-white transition-colors cursor-pointer">[ XYZ ]</button>
+					<button class="hover:text-white transition-colors cursor-pointer">[ ABC ]</button>
+				</div>
+			</div>
 		
-			<nav class="flex p-4 gap-4 border-black bg-[#8A9A5B] sticky top-0 z-20">
+			<nav class="flex p-4 gap-4 border-black bg-[#0f0f0f] sticky top-0 z-20">
 				<a href={resolve('/')} class="flex-1 border-r-4 border-black p-2 hover:bg-black hover:text-white font-bold text-center">
 					[ HOME ]
 				</a>
@@ -53,7 +74,7 @@
 					[ SHOP ]
 				</a>
 			</nav>
-		
+		</div>
 			<main class="flex-1 p-4">
 				{@render children()}
 			</main>
