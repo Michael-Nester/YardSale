@@ -4,9 +4,27 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 
+
+	// script to change nav bar for mobile
+	let scrollY = $state(0);
+	let lastY = $state(0);
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	let isNavHidden = $state(false);
+
+	// if scrollY increases, user is scrolling down
+	$effect(() => {
+		if (scrollY > lastY && scrollY > 50) {
+			isNavHidden = true; // hide when scrolling down
+		} else if (scrollY < lastY) {
+			isNavHidden = false; // show when scrolling up
+		}
+		lastY = scrollY;
+	});
+
 	let { children } = $props();
 </script>
 
+<svelte:window bind:scrollY />
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <!--{@render children()}-->
 
@@ -99,31 +117,41 @@
 				</div>
 			</div>
 		
-			<nav class="flex justify-center space-x-50 border-y-2 border-zinc-800 bg-black py-4">
-				<a href={resolve('/')} class="group flex items-center font-black text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
-					<span class="inline-block transition-transform duration-500 ease-out group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
-					
-					<span class="mx-3 tracking-widest">HOME</span>
 
-					<span class="inline-block transition-transform duration-500 ease-out group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
+			<nav class="
+				fixed bottom-0 left-0 w-full z-50
+				md:static md:w-auto
+				flex justify-center space-x-6 md:space-x-12
+				border-y-2 border-zinc-800 bg-black/80 md:bg-black backdrop-blur-md md:backdrop-blur-none
+				py-3 md:py-4transition-transform duration-500 ease-in-out
+			"> <!--{isNavHidden ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}">-->
+				<a href={resolve('/')} class="group flex items-center font-black text-base md:text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:-translate-x-1 md:group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
+					
+					<span class="mx-2 md:mx-3 tracking-widest">HOME</span>
+
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:translate-x-1 md:group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
 				</a>
 
-				<a href={resolve('/watch')} class="group flex items-center font-black text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
-					<span class="inline-block transition-transform duration-300 ease-out group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
+				<a href={resolve('/watch')} class="group flex items-center font-black text-base md:text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:-translate-x-1 md:group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
 					
-					<span class="mx-3 tracking-widest">VIDEOS</span>
+					<span class="mx-2 md:mx-3 tracking-widest">VIDEOS</span>
 
-					<span class="inline-block transition-transform duration-300 ease-out group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:translate-x-1 md:group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
 				</a>
 
-				<a href={resolve('/shop')} class="group flex items-center font-black text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
-					<span class="inline-block transition-transform duration-300 ease-out group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
+				<a href={resolve('/shop')} class="group flex items-center font-black text-base md:text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:-translate-x-1 md:group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
 					
-					<span class="mx-3 tracking-widest">SHOP</span>
+					<span class="mx-2 md:mx-3 tracking-widest">SHOP</span>
 
-					<span class="inline-block transition-transform duration-300 ease-out group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:translate-x-1 md:group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
 				</a>
 			</nav>
+
+
+
 
 			<!--<<nav class="flex p-4 border-black bg-[#0f0f0f] sticky top-0 z-20">
 				<a href={resolve('/')} class="flex-1 border-r-4 border-black p-2 hover:bg-black hover:text-[#DFFF00] font-bold text-center">

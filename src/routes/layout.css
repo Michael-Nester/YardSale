@@ -2,7 +2,7 @@
 
 @layer base {
   body {
-    background-color: #454B1B;
+    background-color: black;
     color: black;
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
