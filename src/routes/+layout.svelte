@@ -46,25 +46,87 @@
 		<div class="sticky top-0 z-20 bg-[#0f0f0f] border-b-4 border-zinc-800">
 
 			<div class="flex justify-between items-center p-3 text-xs md:text-sm font-bold text-zinc-500 border-b-2 border-zinc-800 bg-[url('/brushed_metal.png')] bg-repeat bg-[length:300px]">
-				<div class="flex-1 flex items-center justify-center pr-6">
+				<div class="flex items-center justify-center pr-6">
 
 					<img
-						src="/baseball-bat-2.png"
+						src="/baseball-bat-3.png"
 						alt="Yard Sale Bat Logo"
-						class="h-8 md:h-50 w-auto max-w-none object-contain object-center"
+						class="h-12 md:h-16 w-auto object-contain"
 					/>
 					<!--<span class="tracking-widest">SYS_ONLINE</span>-->
 				</div>
 				
 				<!--placeholder buttons for search bar and account-->
-				<div class="flex items-center space-x-6">
-					<button class="hover:text-white transition-colors cursor-pointer">[ XYZ ]</button>
-					<button class="hover:text-white transition-colors cursor-pointer">[ ABC ]</button>
+				
+				<div class="flex items-center space-x-6 shrink-0">
+    
+					<button class="group relative w-8 h-8 flex items-center justify-center cursor-pointer overflow-hidden">
+						
+						<img 
+							src="/red-button-idle.png" 
+							alt="" 
+							class="absolute inset-0 w-full h-full object-cover block group-hover:hidden z-0" 
+						/>
+						<img 
+							src="/red-button-clicked.png" 
+							alt="" 
+							class="absolute inset-0 w-full h-full object-cover hidden group-hover:block z-0" 
+						/>
+						
+						<span class="relative z-10 text-zinc-300 group-hover:text-white font-black text-sm uppercase tracking-widest transition-colors">
+							🔍
+						</span>
+					</button>
+				
+					<button class="group relative w-8 h-8 flex items-center justify-center cursor-pointer overflow-hidden">
+						
+						<img 
+							src="/red-button-idle.png" 
+							alt="" 
+							class="absolute inset-0 w-full h-full object-cover block group-hover:hidden z-0" 
+						/>
+						<img 
+							src="/red-button-clicked.png" 
+							alt="" 
+							class="absolute inset-0 w-full h-full object-cover hidden group-hover:block z-0" 
+						/>
+						
+						<span class="relative z-10 text-zinc-300 group-hover:text-white font-black text-sm uppercase tracking-widest transition-colors">
+							♟
+						</span>
+					</button>
+				
 				</div>
 			</div>
 		
-			<nav class="flex p-4 gap-4 border-black bg-[#0f0f0f] sticky top-0 z-20">
-				<a href={resolve('/')} class="flex-1 border-r-4 border-black p-2 hover:bg-black hover:text-white font-bold text-center">
+			<nav class="flex justify-center space-x-50 border-y-2 border-zinc-800 bg-black py-4">
+				<a href={resolve('/')} class="group flex items-center font-black text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
+					
+					<span class="mx-3 tracking-widest">HOME</span>
+
+					<span class="inline-block transition-transform duration-500 ease-out group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
+				</a>
+
+				<a href={resolve('/watch')} class="group flex items-center font-black text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
+					<span class="inline-block transition-transform duration-300 ease-out group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
+					
+					<span class="mx-3 tracking-widest">VIDEOS</span>
+
+					<span class="inline-block transition-transform duration-300 ease-out group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
+				</a>
+
+				<a href={resolve('/shop')} class="group flex items-center font-black text-xl text-zinc-500 hover:text-white transition-colors duration-300 cursor-pointer">
+					<span class="inline-block transition-transform duration-300 ease-out group-hover:-translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">[</span>
+					
+					<span class="mx-3 tracking-widest">SHOP</span>
+
+					<span class="inline-block transition-transform duration-300 ease-out group-hover:translate-x-2 text-zinc-600 group-hover:text-[#DFFF00]">]</span>
+				</a>
+			</nav>
+
+			<!--<<nav class="flex p-4 border-black bg-[#0f0f0f] sticky top-0 z-20">
+				<a href={resolve('/')} class="flex-1 border-r-4 border-black p-2 hover:bg-black hover:text-[#DFFF00] font-bold text-center">
 					[ HOME ]
 				</a>
 				<a href={resolve('/watch')} class="flex-1 border-r-4 border-black p-2 hover:bg-black hover:text-white font-bold text-center">
@@ -73,7 +135,7 @@
 				<a href={resolve('/shop')} class="flex-1 p-2 hover:bg-black hover:text-white font-bold text-center">
 					[ SHOP ]
 				</a>
-			</nav>
+			</nav>>-->
 		</div>
 			<main class="flex-1 p-4">
 				{@render children()}
