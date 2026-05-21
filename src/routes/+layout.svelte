@@ -45,11 +45,11 @@
 
 		<div class="sticky top-0 z-20 bg-[#0f0f0f] border-b-4 border-zinc-800">
 
-			<div class="flex justify-between items-center p-3 text-xs md:text-sm font-bold text-zinc-500 border-b-2 border-zinc-800 bg-black">
+			<div class="flex justify-between items-center p-3 text-xs md:text-sm font-bold text-zinc-500 border-b-2 border-zinc-800 bg-[url('/brushed_metal.png')] bg-repeat bg-[length:300px]">
 				<div class="flex-1 flex items-center justify-center pr-6">
 
 					<img
-						src="/baseball-bat-1.png"
+						src="/baseball-bat-2.png"
 						alt="Yard Sale Bat Logo"
 						class="h-8 md:h-50 w-auto max-w-none object-contain object-center"
 					/>
