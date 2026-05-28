@@ -33,15 +33,16 @@
 	<!--<div class="crt-overlay hidden md:block"></div>-->
 	<!--Left margin graphic-->
 	<!--<div class="flex-1 bg-[url('/yard_sale_1.jpeg')] bg-cover bg-top bg-repeat"></div>-->
-	<aside class="w-1/5 h-full overflow-y-auto border-r-4 border-zinc-800 bg-black relative hidden md:block shrink-0">
+	<aside class="w-1/6 h-full overflow-y-auto border-r-4 border-zinc-800 bg-black relative hidden md:block shrink-0">
 		
-		{#if page.url.pathname.startsWith('/watch')}
+
+		<!--{#if page.url.pathname.startsWith('/watch')}
 			<img src="/yard_sale_2.jpeg" alt="Watch Margin Graphic" class="w-full h-auto block" />
 		{:else if page.url.pathname.startsWith('/shop')}
 			<img src="/yard_sale_1.jpeg" alt="Shop Margin Graphic" class="w-full h-auto block" />
 		{:else}
 			<img src="/yard_sale_3.jpeg" alt="Home Margin Graphic" class="w-full h-auto block" />
-		{/if}
+		{/if}-->
 
 		<div class="p-4 border-t-2 border-zinc-800 text-zinc-400">
 			<h2 class="font-black text-xl uppercase mb-2 text-white">/// UPDATES</h2>
@@ -64,6 +65,11 @@
 						alt="Yard Sale Bat Logo"
 						class="h-12 md:h-16 w-auto object-contain"
 					/>
+					<!--<img
+						src="/yard-sale-cd.png"
+						alt="Yard Sale Bat Logo"
+						class="h-12 md:h-24 w-auto object-contain"
+					/>-->
 
 					<a
 						href={resolve('/')}
