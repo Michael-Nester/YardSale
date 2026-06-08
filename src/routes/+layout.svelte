@@ -33,7 +33,7 @@
 	<!--<div class="crt-overlay hidden md:block"></div>-->
 	<!--Left margin graphic-->
 	<!--<div class="flex-1 bg-[url('/yard_sale_1.jpeg')] bg-cover bg-top bg-repeat"></div>-->
-	<!--<aside class="w-1/6 h-full overflow-y-auto border-r-4 border-zinc-800 bg-black relative hidden md:block shrink-0">
+	<aside class="w-1/6 h-full overflow-y-auto border-r-4 border-zinc-800 bg-black relative hidden md:block shrink-0">
 		
 
 		<div class="p-4 border-t-2 border-zinc-800 text-zinc-400">
@@ -41,7 +41,7 @@
 			<p class="text-sm font-bold mb-4">Welcome to the Yard Sale. Expect turbulence.</p>
 		</div>
 
-	</aside>-->
+	</aside>
 	
 	<div class="flex-1 h-full overflow-y-auto bg-[#0f0f0f] flex flex-col relative text-zinc-200">
 		<!--Middle column, main page-->
@@ -50,7 +50,7 @@
 		<div class="sticky top-0 z-20 bg-[#0f0f0f] border-b-4 border-zinc-800">
 
 			<div class="flex justify-between items-center p-3 text-xs md:text-sm font-bold text-zinc-500 border-b-2 border-zinc-800 bg-[url('/brushed_metal.png')] bg-repeat bg-[length:300px]">
-				<div class="flex items-center justify-center pr-6">
+				<div class="relative inline-block">
 
 					<img
 						src="/baseball-bat-3.png"
@@ -65,7 +65,7 @@
 
 					<a
 						href={resolve('/')}
-						class="absolute top-6 left-4 w-100 h-12 cursor-pointer z-10 block"
+						class="absolute inset-0 z-10 cursor-pointer block"
 						aria-label="Return to home"
 						title="Home"
 					></a>
