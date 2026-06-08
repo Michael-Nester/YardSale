@@ -171,9 +171,9 @@
 				</a>
 			</nav>>-->
 		</div>
-			<main class="relative w-full max-w-[100vw] overflow-x-hidden min-h-screen">
+			<div class="relative w-full max-w-[100vw] overflow-x-hidden min-h-screen">
 				{@render children()}
-			</main>
+			</div>
 		
 		</div>
 	</div>
