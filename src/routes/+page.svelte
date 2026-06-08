@@ -7,7 +7,7 @@
     <h1 class="text-4xl md:text-6xl font-black uppercase tracking0tighter text-white">ARCHIVE</h1>
 </div>
 
-<div class="max-w-[1600px] mx-auto p-6 md:p-12 columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+<!--<div class="max-w-[1600px] mx-auto p-6 md:p-12 columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
 
     <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
 
@@ -135,4 +135,4 @@
         </div>
     </div>
 
-</div>
+</div>-->
