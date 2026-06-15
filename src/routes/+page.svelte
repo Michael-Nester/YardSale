@@ -1,138 +1,41 @@
-<script>
-
+<script land="ts">
+    import { resolve } from '$app/paths';
+    import { page } from '$app/state';
 </script>
 
+<div class="min-h-[80vh] w-full flex items-center justify-center p-6">
 
-<div class="p-4 md:p-6 border-b-4 border-zinc-800 bg-black">
-    <h1 class="text-4xl md:text-6xl font-black uppercase tracking0tighter text-white">ARCHIVE</h1>
-</div>
+    <div class="relative w-full max-w-4xl aspect-video border-4 border-zinc-800 bg-zinc-950 shadow-[16px_16px_0px_0px_rgba(39,39,42,1)] overflow-hidden flex flex-col items-center justify-center group">
 
-<div class="max-w-[1600px] mx-auto p-6 md:p-12 columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+        <div class="absolute inset-0 bg-[url('/rusty_1.jpg')] bg-cover bg-center opacity-40 mix-blend-luminosity group-hover:opacity-50transition-opacity duration-1000"></div>
 
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
+        <div class="absolute inste-0 pointer-events-none opacity-20 z-0" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, #000 2px, #000 4px):"></div>
 
-        <img
-            src="/yard_sale_2.jpeg"
-            alt="Brand Graphic Dark"
-            class="w-full h-auto border-2 border-zinc-700"
-        />
+        <div class="relative z-10 flex flex-col items-center bg-black/70 backdrop-blur-sm border-2 border-zinc-700 p-8 md:p-16 max-w-[90%]">
+            
+            <div class="flex items-center space-x-3 mb-6 border-b-2 border-zinc-800 pb-4 w-full justify-center">
+                <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse shadow-[0_0_10px_rgba(220,38,38,0.8)]"></div>
+                <span class="text-red-500 font-bold tracking-widest text-xs md:text-sm uppercase">[ SITE STATUS: EARLY DEVELOPMENT ]</span>
+                <a href={resolve('/archive')} class="group flex items-center font-black text-xs md:text-sm transition-colors duration-300 cursor-pointer { page.url.pathname === '/archive' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
+					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
+					
+					<span class="mx-2 md:mx-3 tracking-widest">VIEW MEDIA ARCHIVE</span>
 
-        <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase">
-            <span>FMT: GRAPHIC</span>
-            <span>STATUS: [ OK ]</span>
+					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
+				</a>            </div>
+
+            <h1 class="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-4 text-center">
+                Yard Sale
+            </h1>
+
+            <div class="w-full bg-zinc-900/80 border border-zinc-800 p-4 mt-2">
+            <p class="font-mono text-zinc-400 text-xs md:text-sm leading-relaxed">
+                > root@yard-sale.tv:~# <br>
+                > Site under development. <br>
+                > Archive available <br>
+                > <span class="text-white bg-zinc-800 px-1 animate-pulse">Awaiting pure, unfiltered inspiration...</span>
+            </p></div>
+
         </div>
     </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
-
-        <div class="aspect-[3/4] bg-zinc-900 border-2 border-dashed border-zinc-700 flex flex-col items-center justify-center relative overflow-hidden group-hover:bg-zinc-800 transition-colors">
-            <span class="font-black text-2xl text-zinc-600 tracking-widest uppercase text-center px-4">No Signal</span>
-            <span class="text-xs text-zinc=500 mt-2 font-bold animate-pulse">[ AWAITING UPLOAD ]</span>
-        </div>
-        <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase">
-            <span>FMT: OFFLINE</span>
-            <span>STATUS: [ OK ]</span>
-        </div>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
-
-        <img
-            src="/yard_sale_4.jpeg"
-            alt="Brand Graphic Dark"
-            class="w-full h-auto border-2 border-zinc-700"
-        />
-
-        <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase">
-            <span>FMT: GRAPHIC</span>
-            <span>STATUS: [ OK ]</span>
-        </div>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-zinc-900 p-6 relative">
-        <div class="absolute top-0 right-0 bg-zinc-800 text-zinc-400 text-[10px] px-2 py-1 font-bold">SYS_LOG</div>
-        <p class="font-mono text-sm text-zinc-400 leading-relaxed mt-2">
-            > Initialization sequence complete.<br>
-            > Establishing secure connection to yard-sale.tv...<br>
-            > Access granted.<br>
-            > <span class="text-white bg-zinc-800 px-1">WARNING: Core media files missing.</span> Directory fragmentation detected. Proceeding with raw interface display.
-        </p>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
-
-        <div class="aspect-[3/4] bg-zinc-900 border-2 border-dashed border-zinc-700 flex flex-col items-center justify-center relative overflow-hidden group-hover:bg-zinc-800 transition-colors">
-            <span class="font-black text-2xl text-zinc-600 tracking-widest uppercase text-center px-4">No Signal</span>
-            <span class="text-xs text-zinc=500 mt-2 font-bold animate-pulse">[ AWAITING UPLOAD ]</span>
-        </div>
-        <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase">
-            <span>FMT: OFFLINE</span>
-            <span>STATUS: [ OK ]</span>
-        </div>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
-        <div class="aspect-video bg-[url('/brushed_metal.png')] bg-cover bg-center border-2 border-zinc-700 flex items-center justify-center">
-            <div class="bg-black/80 backdrop-blur-sm p-4 border border-zinc-700">
-                <span class="font-black text-xl text-white tracking-widest uppercase">ENCRYPTED</span>
-            </div>
-        </div>
-        <div class="mt-4">
-            <h2 class="text-white font-black uppercase text-lg">Classified Asset</h2>
-            <p class="text-xs font-bold text-zinc-500 uppercase mt-1">Clearance Level: Admin Only</p>
-        </div>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4">
-        <div class="aspect-square bg-zinc-900 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(45deg, #000 0, #000 10px, #27272a 10px, #27272a 20px);"></div>
-            <span class="font-black text-zinc-600 tracking-widest uppercase relative z-10">[ W.I.P ]</span>
-        </div>
-        <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase border-t-2 border-dashed border-zinc-800 pt-2">
-            <span>TYPE: IMAGE</span>
-            <span>STATUS: OFFLINE</span>
-        </div>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
-
-        <img
-            src="/yard_sale_3.jpeg"
-            alt="Brand Graphic Midevil"
-            class="w-full h-auto border-2 border-zinc-700"
-        />
-
-        <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase">
-            <span>FMT: GRAPHIC</span>
-            <span>STATUS: [ OK ]</span>
-        </div>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
-        <div class="aspect-video bg-[url('/rusty_1.jpg')] bg-cover bg-center border-2 border-zinc-700 flex items-center justify-center">
-            <img
-                src="/yard-sale-cd.png"
-                alt="cd graphic"
-                class="w-32 h-32 object-contain"
-                />
-        </div>
-        <div class="mt-4">
-            <p class="text-xs font-bold text-zinc-500 uppercase mt-1">A cd graphic with 'Yard Sale' written on it.</p>
-        </div>
-    </div>
-
-    <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
-
-        <img
-            src="/yard_sale_5.jpeg"
-            alt="Brand Graphic Fish"
-            class="w-full h-auto border-2 border-zinc-700"
-        />
-
-        <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase">
-            <span>FMT: GRAPHIC</span>
-            <span>STATUS: [ OK ]</span>
-        </div>
-    </div>
-
 </div>

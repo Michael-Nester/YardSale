@@ -33,7 +33,7 @@
 	<!--<div class="crt-overlay hidden md:block"></div>-->
 	<!--Left margin graphic-->
 	<!--<div class="flex-1 bg-[url('/yard_sale_1.jpeg')] bg-cover bg-top bg-repeat"></div>-->
-	<aside class="w-1/6 h-full overflow-y-auto border-r-4 border-zinc-800 bg-black relative hidden md:block shrink-0">
+	<!--<aside class="w-1/6 h-full overflow-y-auto border-r-4 border-zinc-800 bg-black relative hidden md:block shrink-0">
 		
 
 		<div class="p-4 border-t-2 border-zinc-800 text-zinc-400">
@@ -41,7 +41,7 @@
 			<p class="text-sm font-bold mb-4">Welcome to the Yard Sale. Expect turbulence.</p>
 		</div>
 
-	</aside>
+	</aside>-->
 	
 	<div class="flex-1 h-full overflow-y-auto bg-[#0f0f0f] flex flex-col relative text-zinc-200">
 		<!--Middle column, main page-->
@@ -124,11 +124,11 @@
 				py-3 md:py-4transition-transform duration-500 ease-in-out
 			"> <!--{isNavHidden ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}">-->
 				<a href={resolve('/')} class="group flex items-center font-black text-base md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
-					<span class="inline-block transition-transform duration-200 ease-out { page.url.pathname === '/' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
+					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
 					
 					<span class="mx-2 md:mx-3 tracking-widest">HOME</span>
 
-					<span class="inline-block transition-transform duration-200 ease-out { page.url.pathname === '/' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
+					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
 				</a>
 
 				<a href={resolve('/watch')} class="group flex items-center font-black text-base md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/watch' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
@@ -145,6 +145,14 @@
 					<span class="mx-2 md:mx-3 tracking-widest">SHOP</span>
 
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/shop' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
+				</a>
+
+				<a href={resolve('/archive')} class="group flex items-center font-black text-base md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/archive' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
+					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
+					
+					<span class="mx-2 md:mx-3 tracking-widest">ARCHIVE</span>
+
+					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
 				</a>
 			</nav>
 
