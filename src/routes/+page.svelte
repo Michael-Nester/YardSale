@@ -13,13 +13,13 @@
 
         <div class="relative z-10 flex flex-col items-center bg-black/70 backdrop-blur-sm border-2 border-zinc-700 p-4 md:p-16 max-w-[80%]">
             
-            <div class="flex items-center space-x-1 mb-4 md:mb-6 border-b-2 border-zinc-800 pb-4 w-full justify-center">
+            <div class="flex items-center space-x-2 md:space-x-4 mb-4 md:mb-6 border-b-2 border-zinc-800 pb-4 w-full justify-center">
                 <div class="w-3 h-3 bg-red-600 rounded-full animate-pulse shadow-[0_0_10px_rgba(220,38,38,0.8)]"></div>
-                <span class="text-red-500 font-bold tracking-widest text-[10px] md:text-sm uppercase">[ SITE STATUS: EARLY DEVELOPMENT ]</span>
+                <span class="text-red-500 font-bold tracking-widest text-[10px] md:text-sm uppercase whitespace-nowrap">[ SITE STATUS: EARLY DEVELOPMENT ]</span>
                 <a href={resolve('/archive')} class="group flex items-center font-black text-xs md:text-sm transition-colors duration-300 cursor-pointer { page.url.pathname === '/archive' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
 					
-					<span class="mx-2 md:mx-3 tracking-widest">VIEW MEDIA ARCHIVE</span>
+					<span class="mx-2 md:mx-3 tracking-widest whitespace-nowrap">VIEW MEDIA ARCHIVE</span>
 
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
 				</a>            </div>

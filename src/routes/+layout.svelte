@@ -29,7 +29,7 @@
 <!--{@render children()}-->
 
 <!--full window, black screen-->
-<div class="flex w-full h-screen overflow-hidden bg-black">
+<div class="flex w-full max-w-[100vw] min-h-screen overflow-hidden bg-black">
 	<!--<div class="crt-overlay hidden md:block"></div>-->
 	<!--Left margin graphic-->
 	<!--<div class="flex-1 bg-[url('/yard_sale_1.jpeg')] bg-cover bg-top bg-repeat"></div>-->
@@ -117,13 +117,15 @@
 		
 
 			<nav class="
-				fixed bottom-0 left-0 w-full z-50
+				fixed bottom-0 left-0 w-full max-w-[100vw] z-50
 				md:static md:w-auto
-				flex justify-center space-x-3 md:space-x-12
+				flex justify-center space-x-3 sm:space-x-6 md:space-x-12
 				border-y-2 border-zinc-800 bg-black/80 md:bg-black backdrop-blur-md md:backdrop-blur-none
-				py-3 md:py-4transition-transform duration-500 ease-in-out
+				py-3 md:py-4 px-2
+				transition-transform duration-500 ease-in-out
+				{isNavHidden ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}
 			"> <!--{isNavHidden ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}">-->
-				<a href={resolve('/')} class="group flex items-center font-black text-base md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
+				<a href={resolve('/')} class="group flex items-center font-black text-xs sm:text-sm md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
 					
 					<span class="mx-2 md:mx-3 tracking-widest">HOME</span>
@@ -131,7 +133,7 @@
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
 				</a>
 
-				<a href={resolve('/watch')} class="group flex items-center font-black text-base md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/watch' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
+				<a href={resolve('/watch')} class="group flex items-center font-black text-xs sm:text-sm md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/watch' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/watch' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
 					
 					<span class="mx-2 md:mx-3 tracking-widest">VIDEOS</span>
@@ -139,7 +141,7 @@
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/watch' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
 				</a>
 
-				<a href={resolve('/shop')} class="group flex items-center font-black text-base md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/shop' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
+				<a href={resolve('/shop')} class="group flex items-center font-black text-xs sm:text-sm md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/shop' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/shop' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
 					
 					<span class="mx-2 md:mx-3 tracking-widest">SHOP</span>
@@ -147,7 +149,7 @@
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/shop' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
 				</a>
 
-				<a href={resolve('/archive')} class="group flex items-center font-black text-base md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/archive' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
+				<a href={resolve('/archive')} class="group flex items-center font-black text-xs sm:text-sm md:text-xl transition-colors duration-300 cursor-pointer { page.url.pathname === '/archive' ? 'text-white' : 'text-zinc-500 hover:text-white' }">
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? '-translate-x-1 md:-translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:-translate-x-1 md:group-hover:-translate-x-2 group-hover:text-[#DFFF00]' }">[</span>
 					
 					<span class="mx-2 md:mx-3 tracking-widest">ARCHIVE</span>
