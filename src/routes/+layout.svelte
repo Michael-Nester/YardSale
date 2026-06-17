@@ -119,7 +119,7 @@
 			<nav class="
 				fixed bottom-0 left-0 w-full z-50
 				md:static md:w-auto
-				flex justify-center space-x-6 md:space-x-12
+				flex justify-center space-x-3 md:space-x-12
 				border-y-2 border-zinc-800 bg-black/80 md:bg-black backdrop-blur-md md:backdrop-blur-none
 				py-3 md:py-4transition-transform duration-500 ease-in-out
 			"> <!--{isNavHidden ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}">-->
