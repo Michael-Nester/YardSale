@@ -3,6 +3,7 @@
  * @typedef {Object} BlurRevealOptions
  * @property {number} [maxDistance] - Distance, in pixels, from center screen.
  * @property {number} [maxBlur] - Maximum blur amount in pixels.
+ * @property {number} [focusZone] - Zone where the element stays in focus.
  */
 
 /**
