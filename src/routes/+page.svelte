@@ -43,7 +43,7 @@
         
         <!-- Massive Translucent Title -->
         <!-- CHANGED: Removed global CRT overlay. Added 'blur-[2px]' for soft optical edges, and 'scanline-text' for moving lines -->
-        <h1 class="relative z-20 text-[24vw] sm:text-8xl md:text-[14rem] font-black text-red-600 tracking-[-0.1em] sm:tracking-[-0.15em] mix-blend-screen leading-none text-center select-none blur-[1px] md:blur-[2px] scanline-text">
+        <h1 class="relative z-20 text-[20vw] sm:text-8xl md:text-[14rem] font-black text-red-600 tracking-[-0.1em] sm:tracking-[-0.15em] mix-blend-screen leading-none text-center select-none blur-[1px] md:blur-[2px] scanline-text">
             YARD SALE
         </h1>
 
