@@ -43,12 +43,13 @@
 
 	</aside>-->
 	
+	
 	<div class="flex-1 h-full overflow-y-auto bg-[#0f0f0f] flex flex-col relative text-zinc-200">
 		<!--Middle column, main page-->
 
-
+		
 		<div class="sticky top-0 z-20 bg-[#0f0f0f] border-b-4 border-zinc-800">
-
+			{#if String(page.url.pathname) !== '/'}
 			<div class="flex justify-between items-center p-3 text-xs md:text-sm font-bold text-zinc-500 border-b-2 border-zinc-800 bg-[url('/brushed_metal.png')] bg-repeat bg-[length:300px]">
 				<div class="relative inline-block">
 
@@ -115,7 +116,7 @@
 				</div>
 			</div>
 		
-
+		
 			<nav class="
 				fixed bottom-0 left-0 w-full max-w-[100vw] z-50
 				md:static md:w-auto
@@ -157,6 +158,7 @@
 					<span class="inline-block transition-transform duration-500 ease-out { page.url.pathname === '/archive' ? 'translate-x-1 md:translate-x-2 text-[#DFFF00]' : 'text-zinc-600 group-hover:translate-x-1 md:group-hover:translate-x-2 group-hover:text-[#DFFF00]' }">]</span>
 				</a>
 			</nav>
+		
 
 
 
@@ -172,6 +174,7 @@
 					[ SHOP ]
 				</a>
 			</nav>>-->
+		{/if}
 		</div>
 			<div class="relative w-full max-w-[100vw] overflow-x-hidden min-h-screen">
 				{@render children()}
