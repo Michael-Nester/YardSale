@@ -17,7 +17,7 @@
 <!-- This logo is completely hidden until the user scrolls past the hero section -->
 {#if showStickyLogo}
     <div transition:fade={{ duration: 400 }} class="fixed top-6 left-6 md:top-8 md:left-8 z-50 pointer-events-none">
-        <h2 class="text-2xl md:text-4xl font-black text-red-600/80 tracking-tighter mix-blend-screen drop-shadow-lg">
+        <h2 class="text-2xl md:text-4xl font-tanker text-red-600/80 tracking-[-0.05em] mix-blend-screen drop-shadow-lg">
             YARD SALE
         </h2>
     </div>
@@ -39,17 +39,16 @@
         <div class="absolute inset-0 pointer-events-none z-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.8)_0%,transparent_25%,transparent_75%,rgba(0,0,0,1)_100%)]"></div>
 
         <!-- TV Static Overlay (Generated via SVG Data URI) -->
-        <div class="absolute inset-0 pointer-events-none opacity-30 mix-blend-overlay z-10" style="background-image: url(&quot;data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E&quot;);"></div>
         
         <!-- Massive Translucent Title -->
         <!-- CHANGED: Removed global CRT overlay. Added 'blur-[2px]' for soft optical edges, and 'scanline-text' for moving lines -->
-        <h1 class="relative z-20 text-[20vw] sm:text-8xl md:text-[14rem] font-black text-red-600 tracking-[-0.1em] sm:tracking-[-0.15em] mix-blend-screen leading-none text-center select-none blur-[1px] md:blur-[2px] scanline-text">
+        <h1 class="relative z-20 text-[20vw] sm:text-8xl md:text-[14rem] font-tanker text-red-600 tracking-[-0.08em] sm:tracking-[-0.09em] mix-blend-screen leading-none text-center select-none blur-[1px] md:blur-[2px] scanline-text">
             YARD SALE
         </h1>
 
         <!-- Continue Prompt -->
         <div class="absolute bottom-6 z-20 flex flex-col items-center animate-pulse opacity-70">
-            <span class="text-[10px] md:text-xs font-mono text-white tracking-[0.3em] uppercase mb-3">continue</span>
+            <span class="text-[10px] md:text-xs font-tanker text-white tracking-[0.3em] uppercase mb-3">continue</span>
         </div>
 
         <!--<div class="fixed bottom-10 left-10 z-20 flex flex-col items-left opacity-70">
@@ -65,7 +64,7 @@
         
         <h2 
             use:blurReveal={{ maxDistance: 400, maxBlur: 24 }} 
-            class="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase text-center will-change-[filter,opacity,transform]"
+            class="text-4xl md:text-7xl font-tanker text-white tracking-tighter uppercase text-center will-change-[filter,opacity,transform]"
         >
             Short Films <br/>
             <span class="text-zinc-600 text-3xl md:text-6xl">Coming Soon.</span>
@@ -77,7 +76,7 @@
             use:blurReveal={{ maxDistance: 300, maxBlur: 16 }} 
             class="group relative flex flex-col items-center will-change-[filter,opacity,transform] cursor-pointer"
         >
-            <span class="text-xl md:text-3xl font-black text-red-600/80 tracking-widest uppercase transition-colors duration-500 group-hover:text-white">
+            <span class="text-xl md:text-3xl font-tanker text-red-600/80 tracking-widest uppercase transition-colors duration-500 group-hover:text-white">
                 [ View The Archive ]
             </span>
             <!-- A cinematic underline that grows on hover -->
