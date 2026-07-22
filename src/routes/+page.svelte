@@ -17,7 +17,7 @@
 <!-- This logo is completely hidden until the user scrolls past the hero section -->
 {#if showStickyLogo}
     <div transition:fade={{ duration: 400 }} class="fixed top-6 left-6 md:top-8 md:left-8 z-50 pointer-events-none">
-        <h2 class="text-2xl md:text-4xl font-black text-red-600/80 tracking-tighter mix-blend-screen drop-shadow-lg">
+        <h2 class="text-2xl md:text-4xl font-tanker text-red-600/80 tracking-[-0.05em] mix-blend-screen drop-shadow-lg">
             YARD SALE
         </h2>
     </div>
@@ -48,7 +48,7 @@
 
         <!-- Continue Prompt -->
         <div class="absolute bottom-6 z-20 flex flex-col items-center animate-pulse opacity-70">
-            <span class="text-[10px] md:text-xs font-mono text-white tracking-[0.3em] uppercase mb-3">continue</span>
+            <span class="text-[10px] md:text-xs font-tanker text-white tracking-[0.3em] uppercase mb-3">continue</span>
         </div>
 
         <!--<div class="fixed bottom-10 left-10 z-20 flex flex-col items-left opacity-70">
@@ -64,7 +64,7 @@
         
         <h2 
             use:blurReveal={{ maxDistance: 400, maxBlur: 24 }} 
-            class="text-4xl md:text-7xl font-black text-white tracking-tighter uppercase text-center will-change-[filter,opacity,transform]"
+            class="text-4xl md:text-7xl font-tanker text-white tracking-tighter uppercase text-center will-change-[filter,opacity,transform]"
         >
             Short Films <br/>
             <span class="text-zinc-600 text-3xl md:text-6xl">Coming Soon.</span>
@@ -76,7 +76,7 @@
             use:blurReveal={{ maxDistance: 300, maxBlur: 16 }} 
             class="group relative flex flex-col items-center will-change-[filter,opacity,transform] cursor-pointer"
         >
-            <span class="text-xl md:text-3xl font-black text-red-600/80 tracking-widest uppercase transition-colors duration-500 group-hover:text-white">
+            <span class="text-xl md:text-3xl font-tanker text-red-600/80 tracking-widest uppercase transition-colors duration-500 group-hover:text-white">
                 [ View The Archive ]
             </span>
             <!-- A cinematic underline that grows on hover -->
