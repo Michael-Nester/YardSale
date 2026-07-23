@@ -2,19 +2,21 @@
 
 <script>
     import { blurReveal } from '$lib/actions/blurReveal.js';
-    import { fade } from 'svelte/transition';
     import { resolve } from '$app/paths';
 
     let scrollY = $state(0);
     let innerHeight = $state(0);
 
+
     // This dynamically calculates if we have scrolled past 90% of the screen height
-    let showStickyLogo = $derived(scrollY > innerHeight * 0.9);
+    // let showStickyLogo = $derived(scrollY > innerHeight * 0.9);
+
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<!-- This logo is completely hidden until the user scrolls past the hero section -->
+
+<!-- This logo is completely hidden until the user scrolls past the hero section
 {#if showStickyLogo}
     <div transition:fade={{ duration: 400 }} class="fixed top-6 left-6 md:top-8 md:left-8 z-50 pointer-events-none">
         <h2 class="text-2xl md:text-4xl font-tanker text-red-600/80 tracking-[-0.05em] mix-blend-screen drop-shadow-lg">
@@ -22,11 +24,15 @@
         </h2>
     </div>
 {/if}
+-->
+
+
 
 <div class="relative w-full bg-black">
     
+    <div class="relative w-full bg-black">
     <!-- SECTION 1: THE HERO (Exactly 100% of the viewport height) -->
-    <div class="relative w-full h-[100vh] overflow-hidden flex flex-col items-center justify-center">
+    <div class="relative w-full h-screen overflow-hidden flex flex-col items-center justify-center">
         
         <!-- The Background Woods Image -->
         <!-- Fallback dark gradient just in case the image loads slowly -->
@@ -45,6 +51,8 @@
         <h1 class="relative z-20 text-[20vw] sm:text-8xl md:text-[14rem] font-tanker text-red-600 tracking-[-0.08em] sm:tracking-[-0.09em] mix-blend-screen leading-none text-center select-none blur-[1px] md:blur-[2px] scanline-text">
             YARD SALE
         </h1>
+        
+
 
         <!-- Continue Prompt -->
         <div class="absolute bottom-6 z-20 flex flex-col items-center animate-pulse opacity-70">
@@ -76,13 +84,14 @@
             use:blurReveal={{ maxDistance: 300, maxBlur: 16 }} 
             class="group relative flex flex-col items-center will-change-[filter,opacity,transform] cursor-pointer"
         >
-            <span class="text-xl md:text-3xl font-tanker text-red-600/80 tracking-widest uppercase transition-colors duration-500 group-hover:text-white">
+            <span class="text-xl md:text-3xl font-tanker text-red-600 tracking-widest uppercase transition-colors duration-500 group-hover:text-white">
                 [ View The Archive ]
             </span>
             <!-- A cinematic underline that grows on hover -->
-            <div class="absolute -bottom-2 w-0 h-[2px] bg-white transition-all duration-700 ease-out group-hover:w-full"></div>
+            <div class="absolute -bottom-2 w-0 h-0.5 bg-white transition-all duration-700 ease-out group-hover:w-full"></div>
         </a>
 
+    </div>
     </div>
 
 </div>
