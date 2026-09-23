@@ -121,11 +121,11 @@
 
     <div class="break-inside-avoid border-4 border-zinc-800 bg-black shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] p-4 group hover:-translate-y-1 transition-transform">
 
-        <img
+        <!--<img
             src="/yard_sale_5.jpeg"
             alt="Brand Graphic Fish"
             class="w-full h-auto border-2 border-zinc-700"
-        />
+        />-->
 
         <div class="mt-4 flex justify-between text-xs font-bold text-zinc-500 uppercase">
             <span>FMT: GRAPHIC</span>
